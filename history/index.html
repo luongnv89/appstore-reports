@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>App Store report</title>
+<style>
+:root{color-scheme:light dark;--bg:#f6f7f9;--card:#fff;--fg:#1d2330;--mute:#5b6475;--line:#d5d9e0;--acc:#2563eb;--bad:#b42318}
+@media (prefers-color-scheme:dark){:root{--bg:#11141a;--card:#1a1f27;--fg:#e8ebf0;--mute:#9aa3b2;--line:#323a46;--acc:#6ea0ff;--bad:#ff8a80}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:16px}
+form{width:100%;max-width:360px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+h1{font-size:20px;margin:0 0 4px}
+p{margin:0 0 16px;color:var(--mute);font-size:14px}
+label{display:block;font-size:14px;margin-bottom:6px}
+input[type=password]{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:transparent;color:inherit}
+.row{display:flex;gap:8px;align-items:center;margin:14px 0 18px;color:var(--mute)}
+button{width:100%;font:inherit;font-weight:600;padding:10px;border:0;border-radius:8px;background:var(--acc);color:#fff;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+#msg{min-height:1.5em;margin:12px 0 0;color:var(--bad)}
+</style>
+</head>
+<body>
+<form id="unlock" autocomplete="on">
+<h1>App Store report</h1>
+<p>This page is encrypted. Enter the password to open it.</p>
+<label for="pw">Password</label>
+<input id="pw" name="password" type="password" autocomplete="current-password" required autofocus>
+<label class="row"><input id="remember" type="checkbox"> Remember on this device</label>
+<button id="go" type="submit">Open</button>
+<p id="msg" role="alert"></p>
+</form>
+<script id="payload" type="application/json">{"v":1,"iter":600000,"site":"jrqTYJe+cE733kSaP6VdiA==","salt":"J5UUpLTdqLCUMfsgRUm1ZQ==","iv":"wbefCzQBksZhzhF0","ct":"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"}</script>
+<script>
+(function () {
+  // Everything lives in this closure: document.open() keeps the global object, so a
+  // top-level const here would collide with the decrypted page's own scripts.
+  'use strict';
+  var P = JSON.parse(document.getElementById('payload').textContent);
+  var form = document.getElementById('unlock');
+  var pw = document.getElementById('pw');
+  var remember = document.getElementById('remember');
+  var go = document.getElementById('go');
+  var msg = document.getElementById('msg');
+  var slot = 'ast-key:' + P.site; // site salt: rotating the password forgets old keys
+  var subtle = window.crypto && window.crypto.subtle;
+
+  function bytes(b64) {
+    var s = atob(b64), u = new Uint8Array(s.length);
+    for (var i = 0; i < s.length; i++) u[i] = s.charCodeAt(i);
+    return u;
+  }
+  function b64(buf) {
+    var u = new Uint8Array(buf), s = '';
+    for (var i = 0; i < u.length; i++) s += String.fromCharCode(u[i]);
+    return btoa(s);
+  }
+  function store(kind) { try { return window[kind]; } catch (e) { return null; } }
+  function saved() {
+    var s = store('sessionStorage'), l = store('localStorage');
+    return (s && s.getItem(slot)) || (l && l.getItem(slot)) || null;
+  }
+  function forget() {
+    var s = store('sessionStorage'), l = store('localStorage');
+    if (s) s.removeItem(slot);
+    if (l) l.removeItem(slot);
+  }
+  // master = PBKDF2-SHA256(password, site salt); page key = HKDF-SHA256(master, page salt).
+  function master(password) {
+    return subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveBits'])
+      .then(function (k) {
+        return subtle.deriveBits({name: 'PBKDF2', hash: 'SHA-256', salt: bytes(P.site), iterations: P.iter}, k, 256);
+      });
+  }
+  function decrypt(raw) {
+    return subtle.importKey('raw', raw, 'HKDF', false, ['deriveKey'])
+      .then(function (k) {
+        return subtle.deriveKey({name: 'HKDF', hash: 'SHA-256', salt: bytes(P.salt),
+          info: new TextEncoder().encode('appstore-tracker page v1')}, k, {name: 'AES-GCM', length: 256}, false, ['decrypt']);
+      })
+      .then(function (k) { return subtle.decrypt({name: 'AES-GCM', iv: bytes(P.iv), tagLength: 128}, k, bytes(P.ct)); })
+      .then(function (buf) { return new TextDecoder().decode(buf); });
+  }
+  function show(html) {
+    // A small Lock control: forgets the key on this device and returns to the password form.
+    var lock = '<button type="button" id="ast-lock" title="Lock: forget the key on this device" ' +
+      'style="position:fixed;right:12px;bottom:12px;z-index:99999;font:600 13px system-ui,sans-serif;' +
+      'padding:6px 12px;border-radius:999px;border:1px solid #8888;background:#fff;color:#1d2330;cursor:pointer;opacity:.85">Lock</button>' +
+      '<script>(function(){var b=document.getElementById("ast-lock");b.onclick=function(){var k=' + JSON.stringify(slot) +
+      ';try{sessionStorage.removeItem(k)}catch(e){}try{localStorage.removeItem(k)}catch(e){}location.reload()}})()<\/script>';
+    var at = html.toLowerCase().lastIndexOf('</body>');
+    html = at < 0 ? html + lock : html.slice(0, at) + lock + html.slice(at);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+  function fail(text) {
+    msg.textContent = text;
+    go.disabled = false;
+    go.textContent = 'Open';
+    pw.select();
+  }
+
+  if (!subtle) {
+    fail('This browser cannot decrypt the page here. Open it over https:// in a current browser.');
+    go.disabled = true;
+    return;
+  }
+  // document.open() is ignored while this page is still parsing, so a saved key waits for load.
+  function ready(fn) {
+    if (document.readyState === 'complete') setTimeout(fn, 0);
+    else window.addEventListener('load', function () { setTimeout(fn, 0); }, {once: true});
+  }
+  var key = saved();
+  if (key) {
+    decrypt(bytes(key)).then(function (html) { ready(function () { show(html); }); }, forget);
+  }
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    msg.textContent = '';
+    go.disabled = true;
+    go.textContent = 'Opening…';
+    var raw;
+    master(pw.value)
+      .then(function (bits) { raw = bits; return decrypt(bits); })
+      .then(function (html) {
+        var s = store('sessionStorage'), l = store('localStorage');
+        try { if (s) s.setItem(slot, b64(raw)); } catch (e) {}
+        try { if (remember.checked && l) l.setItem(slot, b64(raw)); } catch (e) {}
+        show(html);
+      }, function () { fail('Wrong password. Try again.'); });
+  });
+})();
+</script>
+</body>
+</html>
